@@ -1,3 +1,47 @@
+body {
+  background: #b4f1f1;
+  font-family: "Inter", sans-serif;
+}
 h1 {
-  color: blueviolet;
+  font-weight: bold;
+  margin: 20px;
+}
+h2 {
+  text-align: right;
+  margin: 20px;
+}
+h3 {
+  text-align: right;
+  margin: 5px 20px;
+}
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+li {
+  display: block;
+  font-size: 18px;
+  line-height: 19px;
+  list-style: none;
+}
+form {
+  margin: 20px;
+}
+.card {
+  margin: 50px auto;
+  border-radius: 30px;
+  background-color: #ecfffb;
+}
+.field {
+  border-radius: 10px;
+}
+.row {
+  padding: 50px 0px;
+}
+.search-button {
+  background: #00bfff;
+  border-radius: 10px;
+}
+.search-button:hover {
+  background: white;
 }
