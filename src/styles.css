@@ -28,6 +28,8 @@ li {
   font-size: 18px;
   line-height: 19px;
   list-style: none;
+}
+li:first-letter {
   text-transform: capitalize;
 }
 form {
