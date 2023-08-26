@@ -17,6 +17,10 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f1ddfcbc26.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -35,25 +39,37 @@
           </form>
           <div class="row">
             <div class="col-6">
-              <h1>Bruxelles</h1>
+              <h1 id="city-element"></h1>
             </div>
             <div class="col-6">
               <h2>Saturday 22/07, 14h25</h2>
-              <h3>
-                <i class="fa-solid fa-cloud-sun sun-icon"></i>
+              <div class="resume-current">
+                <i class="fa-solid fa-sun weather-icon"></i>
                 <br />
-                <span classe.temperature id="current-temp"> 21°C </span>
+
+                <span classe.temperature id="current-temp"></span>
                 <br />
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
                 <ul>
+                  <li id="current-description">Suny</li>
                   <li>Humidity: <span id="humidity"></span>%</li>
                   <li>Wind: <span id="wind"></span> km/h</li>
                 </ul>
-              </h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="src/index.js"></script>
+    <p>
+      <a
+        href="https://github.com/Celine-Michiels/Weather-app-Vanilla"
+        target="_blank"
+      >
+        Open-source Code </a
+      >by Céline Michiels
+    </p>
+    <script src="src/app.js"></script>
   </body>
 </html>

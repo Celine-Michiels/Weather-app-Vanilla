@@ -1,5 +1,5 @@
 body {
-  background: #b4f1f1;
+  background: #0c358b;
   font-family: "Inter", sans-serif;
 }
 h1 {
@@ -10,9 +10,14 @@ h2 {
   text-align: right;
   margin: 20px;
 }
-h3 {
-  text-align: right;
-  margin: 5px 20px;
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+p {
+  color: white;
+  text-align: center;
 }
 ul {
   margin: 0 0 10px;
@@ -23,17 +28,25 @@ li {
   font-size: 18px;
   line-height: 19px;
   list-style: none;
+  text-transform: capitalize;
 }
 form {
   margin: 20px;
 }
 .card {
-  margin: 50px auto;
+  margin: 20px auto;
+  padding: 10px;
   border-radius: 30px;
-  background-color: #ecfffb;
+  background-color: #eaf1f0;
 }
 .field {
   border-radius: 10px;
+}
+.resume-current {
+  font-size: 20px;
+  text-align: right;
+  margin: 0 0 10px;
+  padding: 0;
 }
 .row {
   padding: 50px 0px;
@@ -44,4 +57,8 @@ form {
 }
 .search-button:hover {
   background: white;
+}
+.weather-icon {
+  color: #ffdd00;
+  font-size: 40px;
 }
