@@ -1,5 +1,5 @@
 body {
-  background: #0c358b;
+  background: #7e075e;
   font-family: "Inter", sans-serif;
 }
 h1 {
@@ -39,7 +39,7 @@ form {
   margin: 20px auto;
   padding: 10px;
   border-radius: 30px;
-  background-color: #eaf1f0;
+  background-color: #c29fbb;
 }
 .field {
   border-radius: 10px;
@@ -54,7 +54,7 @@ form {
   padding: 50px 0px;
 }
 .search-button {
-  background: #00bfff;
+  background: #9a0a7b;
   border-radius: 10px;
 }
 .search-button:hover {
