@@ -64,3 +64,12 @@ form {
   color: #ffdd00;
   font-size: 40px;
 }
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}

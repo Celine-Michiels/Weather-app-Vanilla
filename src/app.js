@@ -22,8 +22,9 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
   let cityElement = document.querySelector("#city-element");
   cityElement.innerHTML = response.data.name;
@@ -60,7 +61,32 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Braine-l'Alleud");
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsiusValue.classList.remove("active");
+  fahrenheitValue.classList.add("active");
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsiusValue.classList.add("active");
+  fahrenheitValue.classList.remove("active");
+}
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitValue = document.querySelector("#fahrenheit-value");
+fahrenheitValue.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusValue = document.querySelector("#celsius-value");
+celsiusValue.addEventListener("click", displayCelsiusTemp);
+
+search("Braine-l'Alleud");
