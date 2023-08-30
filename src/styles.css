@@ -73,3 +73,25 @@ form {
 .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  color: #2a2a2a;
+}
+
+.weather-forecast-temperature {
+  font-size: 12px;
+}
+
+.weather-forecast-max {
+  color: #2d2d2d;
+}
+
+.weather-forecast-min {
+  color: #5c5a5a;
+}
