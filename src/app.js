@@ -1,3 +1,4 @@
+//date
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -20,6 +21,39 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day}, ${hours}:${minutes}`;
 }
+
+//forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class ="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `  
+            <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+
+              <img
+                src="https://openweathermap.org/img/wn/02d@2x.png"
+                alt="cloud"
+                width="48"
+              />
+
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-max">18°</span>
+                <span class="weather-forecast-min">12°</span>
+              </div>
+            </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+// temperature and time
 
 function displayTemperature(response) {
   celsiusTemperature = response.data.main.temp;
@@ -90,3 +124,4 @@ let celsiusValue = document.querySelector("#celsius-value");
 celsiusValue.addEventListener("click", displayCelsiusTemp);
 
 search("Braine-l'Alleud");
+displayForecast();
